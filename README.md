@@ -29,10 +29,10 @@ Open-source and actively maintained projects.
 
 *MCP (Model Context Protocol) servers let Claude Code and Claude Desktop interact with Delphi tooling directly.*
 
-* [Delphi-MCP-Server](https://github.com/GDKsoftware/Delphi-MCP-Server). 
+* [Delphi-MCP-Server](https://github.com/GDKsoftware/Delphi-MCP-Server).   
 `[Delphi]` `[Claude Code]` `[Claude Desktop]` Pure Delphi implementation of an MCP server. Listens on localhost:3000/mcp. Integrates with Claude Desktop, VS Code, Cursor, and Claude Code.
 
-* [Delphi-LSP-MCP-Server](https://github.com/SkybuckFlying/Delphi-LSP-MCP-Server). 
+* [Delphi-LSP-MCP-Server](https://github.com/SkybuckFlying/Delphi-LSP-MCP-Server).   
 `[Delphi]` `[MCP]` Routes MCP calls to Embarcadero's `DelphiLSP.exe` for live code intelligence (go-to-definition, find references, symbol search). Requires valid Delphi license.
 
 
