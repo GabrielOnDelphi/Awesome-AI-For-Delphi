@@ -19,6 +19,7 @@ Open-source and actively maintained projects.
 - [Commercial Tools](#commercial-tools)
 
 
+
 ---
 
 ## MCP Servers
@@ -55,6 +56,7 @@ Open-source and actively maintained projects.
 *Full AI application frameworks written in or targeting Delphi.*
 
 * [MakerAI](https://github.com/gustavoeenriquez/MakerAi). `[Delphi]` `[FPC]` 100% native Delphi AI framework. Features: RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral.
+
 
 
 ---
