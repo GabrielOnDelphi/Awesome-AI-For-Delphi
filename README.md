@@ -1,10 +1,9 @@
-# Claude for Delphi
+# Awesome AI for Delphi
 
 A list of tools, libraries, MCP servers, and resources for using Claude Code with Delphi.
 
 **Focus:** 
-Open-source and actively maintained projects. 
-
+Open-source and actively maintained projects. Commercial tools are listed separately and clearly marked.
 
 ---
 
@@ -13,14 +12,22 @@ Open-source and actively maintained projects.
 - [MCP Servers](#mcp-servers)
 - [IDE Integration](#ide-integration)
 - [Skills, Agents & Plugins](#skills-agents--plugins)
-- [Anthropic / Claude API Wrappers](#anthropic--claude-api-wrappers)
-- [OpenAI API Wrappers](#openai-api-wrappers)
-- [Google Gemini API Wrappers](#google-gemini-api-wrappers)
+- [Cloud LLM API Wrappers](#cloud-llm-api-wrappers)
+  - [Anthropic / Claude](#anthropic--claude)
+  - [OpenAI](#openai)
+  - [Google Gemini](#google-gemini)
+  - [Mistral](#mistral)
+  - [Groq](#groq)
+  - [DeepSeek](#deepseek)
+  - [Hugging Face](#hugging-face)
+  - [Stability AI / Image Generation](#stability-ai--image-generation)
 - [AI Frameworks (Delphi-native)](#ai-frameworks-delphi-native)
 - [Local / Offline LLMs](#local--offline-llms)
+- [Machine Learning & Neural Networks](#machine-learning--neural-networks)
+- [ONNX & Model Inference](#onnx--model-inference)
+- [Image Generation](#image-generation)
 - [Community](#community)
 - [Commercial Tools](#commercial-tools)
-
 
 
 ---
@@ -29,12 +36,12 @@ Open-source and actively maintained projects.
 
 *MCP (Model Context Protocol) servers let Claude Code and Claude Desktop interact with Delphi tooling directly.*
 
-* [Delphi-MCP-Server](https://github.com/GDKsoftware/Delphi-MCP-Server).   
-`[Delphi]` `[Claude Code]` `[Claude Desktop]` Pure Delphi implementation of an MCP server. Listens on localhost:3000/mcp. Integrates with Claude Desktop, VS Code, Cursor, and Claude Code.
+* [Delphi-MCP-Server](https://github.com/GDKsoftware/Delphi-MCP-Server).  
+Pure Delphi implementation. Listens on localhost:3000/mcp. Integrates with Claude Desktop, VS Code, Cursor, and Claude Code.  
+`[Claude Code]` `[Claude Desktop]`
 
-* [Delphi-LSP-MCP-Server](https://github.com/SkybuckFlying/Delphi-LSP-MCP-Server).   
-`[Delphi]` `[MCP]` Routes MCP calls to Embarcadero's `DelphiLSP.exe` for live code intelligence (go-to-definition, find references, symbol search). Requires valid Delphi license.
-
+* [Delphi-LSP-MCP-Server](https://github.com/SkybuckFlying/Delphi-LSP-MCP-Server).  
+Routes MCP calls to Embarcadero's `DelphiLSP.exe` for live code intelligence: go-to-definition, find references, symbol search. Requires valid Delphi license.  
 
 ---
 
@@ -42,50 +49,78 @@ Open-source and actively maintained projects.
 
 *AI assistance built into or plugged into RAD Studio / Delphi IDE.*
 
-* [RAD Studio 13 Smart CodeInsight — Claude Patch](https://blogs.embarcadero.com/rad-studio-13-smart-codeinsight-claude-patch-released/). `[RAD Studio 13]` Official Embarcadero patch adding Claude-powered code completion and suggestions via GetIt package manager. // *Built-in; no extra install beyond GetIt.*
+* [RAD Studio 13 Smart CodeInsight — Claude Patch](https://blogs.embarcadero.com/rad-studio-13-smart-codeinsight-claude-patch-released/).  
+Official Embarcadero GetIt patch adding Claude-powered code completion.  
+`[RAD Studio 13]`
 
-* [Delphi AI Developer](https://github.com/Code4Delphi/Delphi-AI-Developer). `[Delphi]` Open-source RAD Studio IDE plugin. Chat, code generation, and refactoring directly inside the IDE. Supports OpenAI, Gemini, Groq, Ollama.
-
+* [Delphi AI Developer](https://github.com/Code4Delphi/Delphi-AI-Developer).  
+Open-source RAD Studio IDE plugin. Chat, code generation, and refactoring directly inside the IDE. Multi-provider: OpenAI, Gemini, Groq, Ollama.  
 
 ---
 
 ## Skills, Agents & Plugins
 
-*Claude Code skills, agents, and standalone tools that enhance the Delphi + Claude workflow.*
+*Claude Code skills, agents, and standalone tools that enhance the Delphi + AI workflow.*
 
-* [ClaudeCode TokenVampire](https://github.com/GabrielOnDelphi/ClaudeCode_TokenVampire). `[Claude Code]` `[Windows]` Real-time token consumption monitor for Claude Code's 5-hour rolling window. Offline tray app showing per-hour bar charts (color-coded), cache hit rates, cost estimates, and cache-tier expiration countdowns. Zero API calls — reads local usage logs only. License: MPL-2.0.
-
-
----
-
-## Anthropic / Claude API Wrappers
-
-*Libraries for calling the Claude / Anthropic API directly from Delphi code.*
-
-* [DelphiAnthropic](https://github.com/MaxiDonkey/DelphiAnthropic). `[Delphi]` Comprehensive Anthropic SDK for Delphi. Supports: all Claude models, vision, prompt caching, batch processing, tool use, MCP connector, streaming. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/anthropic-api-wrapper-for-delphi/).
-
+* [ClaudeCode TokenVampire](https://github.com/GabrielOnDelphi/ClaudeCode_TokenVampire).  
+Real-time token consumption monitor for Claude Code's 5-hour rolling window. Offline tray app: per-hour bar charts (color-coded), cache hit rates, cost estimates, cache-tier expiration countdowns. Zero API calls — reads local usage logs only. License: MPL-2.0.  
+`[Claude Code]` `[Windows]`
 
 ---
 
-## OpenAI API Wrappers
+## Cloud LLM API Wrappers
 
-*Libraries for calling OpenAI-compatible APIs from Delphi.*
+*Libraries for calling cloud AI APIs directly from Delphi. MaxiDonkey maintains a comprehensive family of wrappers covering most major providers.*
 
-* [DelphiOpenAI](https://github.com/HemulGM/DelphiOpenAI). `[Delphi]` Most feature-complete OpenAI wrapper for Delphi. ChatGPT, DALL-E, Whisper, embeddings, functions. Also supports DeepSeek, Azure OpenAI, YandexGPT, Ollama, GigaChat, Qwen via compatible endpoints.
+### Anthropic / Claude
 
-* [openai-delphi](https://github.com/landgraf-dev/openai-delphi). `[Delphi]` `[FPC]` OpenAI client for Delphi and Lazarus. ChatGPT, DALL-E. Cleaner API surface, good Lazarus compat.
+* [DelphiAnthropic](https://github.com/MaxiDonkey/DelphiAnthropic).  
+Full Anthropic SDK. All Claude models, vision, prompt caching, batch processing, tool use, MCP connector, streaming. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/anthropic-api-wrapper-for-delphi/).  
 
+### OpenAI
 
----
+* [DelphiOpenAI](https://github.com/HemulGM/DelphiOpenAI).  
+Most feature-complete OpenAI wrapper. ChatGPT, DALL-E, Whisper, embeddings, functions. Also supports DeepSeek, Azure OpenAI, YandexGPT, Ollama, GigaChat, Qwen via compatible endpoints.  
 
-## Google Gemini API Wrappers
+* [DelphiGenAI](https://github.com/MaxiDonkey/DelphiGenAI).  
+MaxiDonkey's OpenAI wrapper. Covers GPT-5 series, vision, audio, SORA video generation, embeddings, and agentic workflows.  
 
-*Libraries for calling the Google Gemini API from Delphi.*
+* [openai-delphi](https://github.com/landgraf-dev/openai-delphi).  
+OpenAI client for Delphi and Lazarus. Clean API surface, good Lazarus compat.  
+`[Lazarus]`
 
-* [DelphiGemini](https://github.com/MaxiDonkey/DelphiGemini). `[Delphi]` Google Gemini SDK for Delphi by MaxiDonkey. Supports chat, embeddings, code generation, vision, video/audio prompting, fine-tuning, caching. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/gemini-api-wrapper-for-delphi/).
+### Google Gemini
 
-* [Gemini4Delphi](https://github.com/delmardelima/Gemini4Delphi). `[Delphi]` Lightweight Gemini bridge for Delphi.
+* [DelphiGemini](https://github.com/MaxiDonkey/DelphiGemini).  
+Google Gemini SDK. Chat, embeddings, code generation, vision, video/audio prompting, fine-tuning, caching. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/gemini-api-wrapper-for-delphi/).  
 
+* [Gemini4Delphi](https://github.com/delmardelima/Gemini4Delphi).  
+Lightweight Gemini bridge.  
+
+### Mistral
+
+* [DelphiMistralAI](https://github.com/MaxiDonkey/DelphiMistralAI).  
+Mistral text, vision, and audio models. Agentic conversations, embeddings, Codestral code generation, fine-tuning, batching, moderation.  
+
+### Groq
+
+* [DelphiGroqCloud](https://github.com/MaxiDonkey/DelphiGroqCloud).  
+Groq LPU cloud API wrapper. Runs Meta, OpenAI, Mistral, and Google models at inference speeds. Chat, image analysis, audio transcription, tool use.  
+
+### DeepSeek
+
+* [DelphiDeepseek](https://github.com/MaxiDonkey/DelphiDeepseek).  
+DeepSeek reasoning model wrapper. Also supports local LM Studio server.  
+
+### Hugging Face
+
+* [DelphiHuggingFace](https://github.com/MaxiDonkey/DelphiHuggingFace).  
+Hugging Face Inference API. Object detection, text classification, sentiment analysis, image segmentation, speech-to-text, music generation.  
+
+### Stability AI / Image Generation
+
+* [DelphiStabilityAI](https://github.com/MaxiDonkey/DelphiStabilityAI).  
+Stability.ai wrapper. Image generation, video generation, 3D generation, editing, and upscaling.  
 
 ---
 
@@ -93,10 +128,12 @@ Open-source and actively maintained projects.
 
 *Full AI application frameworks written in or targeting Delphi.*
 
-* [MakerAI](https://github.com/gustavoeenriquez/MakerAi). `[Delphi]` `[FPC]` 100% native Delphi AI framework. Features: RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/makerai-universal-llm-connector-for-delphi/).
+* [MakerAI](https://github.com/gustavoeenriquez/MakerAi).  
+Native Delphi AI framework. RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/makerai-universal-llm-connector-for-delphi/).  
+`[FPC]`
 
-* [LlamaKit](https://github.com/gustavoeenriquez/LlamaKit). `[Delphi]` Local LLM inference via llama.cpp GGUF models. Compiled Windows DLLs + Delphi wrappers. Zero network, no API keys. By the MakerAI author.
-
+* [LlamaKit](https://github.com/gustavoeenriquez/LlamaKit).  
+Local LLM inference via llama.cpp GGUF models. Compiled Windows DLLs + Delphi wrappers. Zero network, no API keys. By the MakerAI author.  
 
 ---
 
@@ -104,14 +141,53 @@ Open-source and actively maintained projects.
 
 *Run LLMs locally from Delphi — no cloud, no API keys.*
 
-* [Dllama](https://github.com/tinyBigGAMES/Dllama). `[Delphi]` LLM inference in Delphi via llama.cpp. Supports Ollama-compatible GGUF models (Llama, Mistral, Gemma, etc.).
+* [llama-cpp-delphi](https://github.com/Embarcadero/llama-cpp-delphi).  
+Official Embarcadero llama.cpp binding. Run GGUF models locally.  
 
+* [Dllama](https://github.com/tinyBigGAMES/Dllama).  
+LLM inference via llama.cpp. Supports Ollama-compatible GGUF models: Llama, Mistral, Gemma, etc.  
+
+---
+
+## Machine Learning & Neural Networks
+
+*Classical ML, neural networks, and training frameworks — not LLM-based.*
+
+* [TensorFlow.Delphi](https://github.com/Pigrecos/TensorFlow.Delphi).  
+Complete TensorFlow API binding. Build, train, and deploy ML models without leaving Pascal.  
+
+* [TONNXRuntime](https://github.com/hshatti/TONNXRuntime).  
+Microsoft ONNX Runtime bindings for FreePascal and Delphi. Run pre-trained ONNX models (classification, detection, NLP, etc.).  
+`[Lazarus]`
+
+---
+
+## ONNX & Model Inference
+
+*Run trained models locally via ONNX or other runtimes.*
+
+* [Delphi-YOLO-ONNX-RuntimeWrapper](https://github.com/SoftacomCompany/Delphi-YOLO-ONNX-RuntimeWrapper).  
+YOLO object detection via ONNX Runtime. Real-time bounding boxes on images and video. Also on Embarcadero GetIt.  
+
+---
+
+## Image Generation
+
+*Stable Diffusion and generative image tools.*
+
+* [DelphiStabilityAI](https://github.com/MaxiDonkey/DelphiStabilityAI).  
+Stability.ai wrapper. Image generation, video generation, 3D generation, editing, and upscaling. (See [Stability AI / Image Generation](#stability-ai--image-generation) above for details.)  
+
+* [Stable-Diffusion-Desktop-Client](https://github.com/FMXExpress/Stable-Diffusion-Desktop-Client).  
+Cross-platform FMX desktop client for Stable Diffusion (Windows, macOS, Linux). Calls SD via REST API.  
+`[FMX]`
 
 ---
 
 ## Community
 
-* [Delphi-PRAXiS — AI & Claude discussions](https://en.delphipraxis.net/). Community forum. Search "Claude" or "AI" for ongoing threads on integrating LLMs into Delphi development.
+* [Delphi-PRAXiS — AI & LLM discussions](https://en.delphipraxis.net/).  
+Community forum. Search "Claude", "AI", or "LLM" for ongoing threads on integrating AI into Delphi development.  
 
 
 ---
@@ -120,9 +196,11 @@ Open-source and actively maintained projects.
 
 *Paid or source-available products. Clearly marked.*
 
-* [TMS AI Studio](https://www.tmssoftware.com/site/tmsaistudio.asp). `[Delphi]` `[FPC]` `[Commercial]` Component suite for building AI-powered Delphi applications. Includes `TTMSMCPServer` class for creating MCP servers in Delphi, plus LLM connectors for Claude, OpenAI, Gemini, Ollama.
 
-* [Claude Code Training for Delphi Developers](https://training.gdksoftware.com/). `[Claude Code]` `[Commercial]` Dedicated training by GDK Software. Covers CLAUDE.md setup, MCP integration, and Delphi-specific Claude Code workflows.
+
+* [Claude Code Training for Delphi Developers](https://training.gdksoftware.com/).  
+Dedicated training by GDK Software. CLAUDE.md setup, MCP integration, Delphi-specific Claude Code workflows.  
+`[Commercial]` `[Claude Code]`
 
 ---
 
