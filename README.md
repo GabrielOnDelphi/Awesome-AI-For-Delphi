@@ -63,8 +63,8 @@ Open-source RAD Studio IDE plugin. Chat, code generation, and refactoring direct
 *Claude Code skills, agents, and standalone tools that enhance the Delphi + AI workflow.*
 
 * [ClaudeCode TokenVampire](https://github.com/GabrielOnDelphi/ClaudeCode_TokenVampire).  
-Real-time token consumption monitor for Claude Code's 5-hour rolling window. Offline tray app: per-hour bar charts (color-coded), cache hit rates, cost estimates, cache-tier expiration countdowns. Zero API calls — reads local usage logs only. License: MPL-2.0.  
-`[Claude Code]` `[Windows]`
+Real-time token consumption monitor for Claude Code's 5-hour rolling window. Offline tray app: per-hour bar charts (color-coded), cache hit rates, cost estimates, cache-tier expiration countdowns. Zero API calls — reads local usage logs only. Freeware.  
+`[Claude Code]`
 
 ---
 
@@ -75,7 +75,7 @@ Real-time token consumption monitor for Claude Code's 5-hour rolling window. Off
 ### Anthropic / Claude
 
 * [DelphiAnthropic](https://github.com/MaxiDonkey/DelphiAnthropic).  
-Full Anthropic SDK. All Claude models, vision, prompt caching, batch processing, tool use, MCP connector, streaming. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/anthropic-api-wrapper-for-delphi/).  
+Full Anthropic SDK. All Claude models, vision, prompt caching, batch processing, tool use, MCP connector, streaming. 
 
 ### OpenAI
 
@@ -92,7 +92,7 @@ OpenAI client for Delphi and Lazarus. Clean API surface, good Lazarus compat.
 ### Google Gemini
 
 * [DelphiGemini](https://github.com/MaxiDonkey/DelphiGemini).  
-Google Gemini SDK. Chat, embeddings, code generation, vision, video/audio prompting, fine-tuning, caching. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/gemini-api-wrapper-for-delphi/).  
+Google Gemini SDK. Chat, embeddings, code generation, vision, video/audio prompting, fine-tuning, caching.
 
 * [Gemini4Delphi](https://github.com/delmardelima/Gemini4Delphi).  
 Lightweight Gemini bridge.  
@@ -129,7 +129,7 @@ Stability.ai wrapper. Image generation, video generation, 3D generation, editing
 *Full AI application frameworks written in or targeting Delphi.*
 
 * [MakerAI](https://github.com/gustavoeenriquez/MakerAi).  
-Native Delphi AI framework. RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral. Also on [Embarcadero GetIt](https://getitnow.embarcadero.com/makerai-universal-llm-connector-for-delphi/).  
+Native Delphi AI framework. RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral. 
 `[FPC]`
 
 * [LlamaKit](https://github.com/gustavoeenriquez/LlamaKit).  
@@ -167,7 +167,7 @@ Microsoft ONNX Runtime bindings for FreePascal and Delphi. Run pre-trained ONNX 
 *Run trained models locally via ONNX or other runtimes.*
 
 * [Delphi-YOLO-ONNX-RuntimeWrapper](https://github.com/SoftacomCompany/Delphi-YOLO-ONNX-RuntimeWrapper).  
-YOLO object detection via ONNX Runtime. Real-time bounding boxes on images and video. Also on Embarcadero GetIt.  
+YOLO object detection via ONNX Runtime. Real-time bounding boxes on images and video.   
 
 ---
 
