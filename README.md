@@ -186,7 +186,7 @@ Cross-platform FMX desktop client for Stable Diffusion (Windows, macOS, Linux). 
 
 ## Community
 
-* [Delphi-PRAXiS — AI & LLM discussions](https://en.delphipraxis.net/).  
+* [Delphi-PRAXiS — AI & LLM discussions](https://en.delphipraxis.net/forum/43-ai-assisted-coding/).  
 Community forum. Search "Claude", "AI", or "LLM" for ongoing threads on integrating AI into Delphi development.  
 
 
