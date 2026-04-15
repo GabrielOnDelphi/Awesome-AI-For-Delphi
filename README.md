@@ -17,6 +17,7 @@ Open-source and actively maintained projects.
 - [Claude Code Setup for Delphi](#claude-code-setup-for-delphi)
 - [Training & Community](#training--community)
 
+
 ---
 
 ## MCP Servers
@@ -26,6 +27,7 @@ Open-source and actively maintained projects.
 * [Delphi-MCP-Server](https://github.com/GDKsoftware/Delphi-MCP-Server). `[Delphi]` `[Claude Code]` `[Claude Desktop]` Pure Delphi implementation of an MCP server. Listens on localhost:3000/mcp. Integrates with Claude Desktop, VS Code, Cursor, and Claude Code.
 
 * [Delphi-LSP-MCP-Server](https://github.com/SkybuckFlying/Delphi-LSP-MCP-Server). `[Delphi]` `[MCP]` Routes MCP calls to Embarcadero's `DelphiLSP.exe` for live code intelligence (go-to-definition, find references, symbol search). Requires valid Delphi license.
+
 
 ---
 
@@ -45,6 +47,7 @@ Open-source and actively maintained projects.
 
 * [DelphiAnthropic](https://github.com/MaxiDonkey/DelphiAnthropic). `[Delphi]` Unofficial but comprehensive Anthropic SDK for Delphi. Supports: all Claude models, vision, prompt caching, batch processing, tool use, MCP connector, streaming. Also available on [Embarcadero GetIt](https://getitnow.embarcadero.com/anthropic-api-wrapper-for-delphi/).
 
+
 ---
 
 ## AI Frameworks (Delphi-native)
@@ -52,6 +55,7 @@ Open-source and actively maintained projects.
 *Full AI application frameworks written in or targeting Delphi.*
 
 * [MakerAI](https://github.com/gustavoeenriquez/MakerAi). `[Delphi]` `[FPC]` 100% native Delphi AI framework. Features: RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral.
+
 
 ---
 
@@ -79,6 +83,7 @@ Wire a `delphi-compiler` sub-agent that calls `Build.cmd` and parses Delphi's co
 ### Custom Agent: delphi-review
 
 Wire a `delphi-review` sub-agent for code review of `.pas` files — checks for forbidden patterns, memory leaks, swallowed exceptions, and style compliance.
+
 
 ---
 
