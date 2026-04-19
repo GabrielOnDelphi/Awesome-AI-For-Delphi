@@ -9,6 +9,7 @@ Open-source and actively maintained projects. Commercial tools are listed separa
 
 ## Contents
 
+- [Apps](#apps)
 - [MCP Servers](#mcp-servers)
 - [IDE Integration](#ide-integration)
 - [Skills, Agents & Plugins](#skills-agents--plugins)
@@ -65,6 +66,16 @@ Open-source RAD Studio IDE plugin. Chat, code generation, and refactoring direct
 * [ClaudeCode TokenVampire](https://github.com/GabrielOnDelphi/ClaudeCode_TokenVampire).  
 Real-time token consumption monitor for Claude Code's 5-hour rolling window. Offline tray app: per-hour bar charts (color-coded), cache hit rates, cost estimates, cache-tier expiration countdowns. Zero API calls — reads local usage logs only. Freeware.  
 `[Claude Code]`
+
+---
+
+## Apps
+
+*Standalone AI applications built in Delphi.*
+
+* [ChatGPT (HemulGM)](https://github.com/HemulGM/ChatGPT).  
+Native ChatGPT client built in Delphi. Cross-platform: Windows, Mac, Android, iOS, Linux.  
+`[FMX]`
 
 ---
 
@@ -178,6 +189,9 @@ YOLO object detection via ONNX Runtime. Real-time bounding boxes on images and v
 * [DelphiStabilityAI](https://github.com/MaxiDonkey/DelphiStabilityAI).  
 Stability.ai wrapper. Image generation, video generation, 3D generation, editing, and upscaling. (See [Stability AI / Image Generation](#stability-ai--image-generation) above for details.)  
 
+* [DALL-E (HemulGM)](https://github.com/HemulGM/DALL-E).  
+DALL-E image generation client for Delphi.  
+
 * [Stable-Diffusion-Desktop-Client](https://github.com/FMXExpress/Stable-Diffusion-Desktop-Client).  
 Cross-platform FMX desktop client for Stable Diffusion (Windows, macOS, Linux). Calls SD via REST API.  
 `[FMX]`
@@ -188,6 +202,9 @@ Cross-platform FMX desktop client for Stable Diffusion (Windows, macOS, Linux). 
 
 * [Delphi-PRAXiS — AI & LLM discussions](https://en.delphipraxis.net/forum/43-ai-assisted-coding/).  
 Community forum. Search "Claude", "AI", or "LLM" for ongoing threads on integrating AI into Delphi development.  
+
+* [awesome-chatgpt (HemulGM)](https://github.com/HemulGM/awesome-chatgpt).  
+General (non-Delphi) curated list of ChatGPT resources, tools, and projects. Useful background reading.  
 
 
 ---
