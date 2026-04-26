@@ -44,6 +44,16 @@ Pure Delphi implementation. Listens on localhost:3000/mcp. Integrates with Claud
 * [Delphi-LSP-MCP-Server](https://github.com/SkybuckFlying/Delphi-LSP-MCP-Server).  
 Routes MCP calls to Embarcadero's `DelphiLSP.exe` for live code intelligence: go-to-definition, find references, symbol search. Requires valid Delphi license.  
 
+* [DPT — Delphi Processing Tools](https://github.com/WladiD/WDDelphiTools/tree/master/Projects/DPT).  
+CLI "Swiss Army Knife" for Delphi with a standalone MCP server that **lets Claude Code run and debug your Delphi program end-to-end**. The `McpDebugger` exposes:
+  - Start / stop / terminate debug sessions
+  - Set, list, remove hardware breakpoints
+  - Continue, step into, step over, async wait-until-paused
+  - Inspect stack trace, registers, stack slots, stack memory, arbitrary memory, globals
+  - Read disassembly
+
+  Paired with the `AiSession` workflow engine for AI-driven code analysis (lint findings, style violations) and general build / CI-CD / IDE automation. Works standalone — does not require the RAD Studio IDE open. Actively maintained (v0.9, Apr 2026).  
+
 ---
 
 ## IDE Integration
@@ -140,7 +150,15 @@ Stability.ai wrapper. Image generation, video generation, 3D generation, editing
 *Full AI application frameworks written in or targeting Delphi.*
 
 * [MakerAI](https://github.com/gustavoeenriquez/MakerAi).  
-Native Delphi AI framework. RAG 2.0, autonomous agents, semantic memory, visual workflow builder. Multi-provider: Claude, OpenAI, Gemini, Ollama, Mistral. 
+Embedded framework for building AI-powered Delphi apps — drop components into your project, compile into the EXE. Provides:
+  - **Vector RAG** — semantic + hybrid search over embeddings (HNSW + BM25), SQL-like `VQL` query language
+  - **Graph RAG** — knowledge graph with `GQL` (Cypher-like) queries, shortest-path, hub detection
+  - **Autonomous agents** — directed graphs of AI nodes run on a thread pool, with checkpoints and human-in-the-loop approval
+  - **Universal LLM connector** — swap OpenAI / Claude / Gemini / Grok / Mistral / DeepSeek / Ollama at runtime without code changes
+  - **Visual workflow builder** (demo 051) — drag-and-drop multi-agent orchestration with conditional routing and parallel fan-out
+  - **MCP protocol** support
+
+  Typical use case: ingest PDFs → vector search → route chunks to Claude → manual approval → final summary, all inside a single Delphi EXE. Delphi 10.4+ (limited), full support on newer versions. 
 `[FPC]`
 
 * [LlamaKit](https://github.com/gustavoeenriquez/LlamaKit).  
