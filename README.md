@@ -164,6 +164,10 @@ Embedded framework for building AI-powered Delphi apps — drop components into 
 * [LlamaKit](https://github.com/gustavoeenriquez/LlamaKit).  
 Local LLM inference via llama.cpp GGUF models. Compiled Windows DLLs + Delphi wrappers. Zero network, no API keys. By the MakerAI author.  
 
+* [SmartCore AI Components Pack](https://blogs.embarcadero.com/introducing-the-smartcore-ai-components-pack/).  
+Official Embarcadero AI components pack. Engine-agnostic AI connection component (OpenAI, Claude, Gemini, Ollama), request components for text / images / structured JSON, and direct UI control binding. Use cases: chatbots, image generation, translation, data analysis. **Not easily accessible** — distributed only through GetIt and requires RAD Studio 13.  
+`[RAD Studio 13]` `[GetIt]`
+
 ---
 
 ## Local / Offline LLMs
