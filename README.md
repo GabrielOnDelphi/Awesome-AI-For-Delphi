@@ -54,6 +54,10 @@ CLI "Swiss Army Knife" for Delphi with a standalone MCP server that **lets Claud
 
   Paired with the `AiSession` workflow engine for AI-driven code analysis (lint findings, style violations) and general build / CI-CD / IDE automation. Works standalone — does not require the RAD Studio IDE open. Actively maintained (v0.9, Apr 2026).  
 
+* [Autopilot for Delphi](https://github.com/GabrielOnDelphi/Autopilot-for-Delphi).  
+Hands the controls of your **running** VCL or FMX app to the AI over MCP: it clicks buttons, types text, reads control state, and screenshots the live form — so the assistant runs the whole open-click-check-fix-recompile loop with no human at the keyboard. Drives `TForm.ShowModal` dialogs via component tools and native OS dialogs (`Application.MessageBox`, Task Dialog, common file dialogs) via a dedicated `dismiss_dialog` tool. Supports Android FMX targets.  
+`[VCL]` `[FMX]` `[Android]`
+
 ---
 
 ## IDE Integration
